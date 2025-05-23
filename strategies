@@ -1,0 +1,7 @@
+# strategies/netmetering_evening.py
+
+def decide_action(soc, hour):
+    if hour >= 22 or hour < 6:
+        if soc > 20:
+            return "discharge"
+    return "hold"
